@@ -41,7 +41,7 @@ class AppController extends Controller
      public function isAuthorized($user)
       {
           // By default deny access.
-          return false;
+          return true;//change to false to deny all
       }
 
 
@@ -75,7 +75,7 @@ class AppController extends Controller
 
         // Allow the display action so our PagesController
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'view', 'index']);
+        $this->Auth->allow(['display', 'view', 'index','add']);
 
 
         /*
